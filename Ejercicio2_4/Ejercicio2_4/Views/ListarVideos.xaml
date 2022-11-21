@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:video="clr-namespace:Xam.Forms.VideoPlayer;assembly=Xam.Forms.VideoPlayer"
+             x:Class="Ejercicio2_4.Views.ListarVideosPage">
+    
+    <ContentPage.Content Title="Tarea2_4">
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="25" CornerRadius="0">
+                <Label Text="Lista de videos guardados" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+            </Frame>
+            <ListView x:Name="listaVideos" ItemTapped="listaVideos_ItemTapped" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ViewCell >
+                            <StackLayout>
+
+                                <Grid BackgroundColor="#2196F3" Padding="0,0,0,0" RowSpacing="10" ColumnSpacing="10" >
+
+
+                                    <Label Grid.Column="0" Text="{Binding Id}" Margin="10,10,10,10" />
+                                    <Label Grid.Column="1" Text="{Binding Descripcion}"  />
+
+                                </Grid>
+
+                            </StackLayout>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
